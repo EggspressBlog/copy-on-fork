@@ -13,7 +13,7 @@ jobs:
         with:
           repository: dentonzh/copy-on-fork
           ref: main
-          path: copy-on-fork
+          path: app/workspace
 
       - name: Check if running on fork
         run : |
@@ -24,7 +24,7 @@ jobs:
       
       - name: Copy workspace to root
         run: |
-          cd app/workspace
+          ls
           cp -r . /
 
       - name: Commit and push changes
