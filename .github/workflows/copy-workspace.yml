@@ -17,7 +17,7 @@ jobs:
 
     - name: Check if running on fork
       run : |
-        if [[ "GITHBU_BASE_REF" == "$GITHBU_REF" ]]; then
+        if [[ "GITHUB_BASE_REF" == "$GITHUB_REF" ]]; then
           echo "Not running on fork. To protect main repository, exiting this workflow."
           exit 1
         fi
