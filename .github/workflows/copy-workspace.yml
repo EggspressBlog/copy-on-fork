@@ -1,7 +1,7 @@
 name: Copy Workspace on Fork
 
 on:
-  worker_dispatch:
+  workflow_dispatch:
 
 jobs:
   copy-workspace:
