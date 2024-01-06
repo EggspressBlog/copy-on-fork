@@ -11,9 +11,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          repository: dentonzh/copy-on-fork
+          repository: ${{ github.repository }}
           ref: main
-          path: app/workspace
 
       - name: Check if running on fork
         run : |
@@ -25,6 +24,7 @@ jobs:
       - name: Copy workspace to root
         run: |
           ls
+          cd app/workspace/
           cp -r . /
 
       - name: Commit and push changes
